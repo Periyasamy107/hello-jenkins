@@ -1,10 +1,23 @@
-print('hello Sam')
+import sys
 
-def mul(a,b):
-    return a * b 
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: python hello.py <number1> <number2>")
+        sys.exit(1)
+    
+    n1 = int(sys.argv[1])
+    n2 = int(sys.argv[2])
 
-n1 = int(input('Enter a first number : '))
-n2 = int(input('Enter a second number : '))
+    # Your script logic here
+    print("The first number is:", n1)
+    print("The second number is:", n2)
 
-output = mul(n1,n2)
-print(output)
+    def mul(a,b):
+        return a * b 
+
+    output = mul(n1,n2)
+
+    print(output)
+
+if __name__ == "__main__":
+    main()
